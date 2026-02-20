@@ -1384,6 +1384,408 @@ let reverseVal = arr11.reverse()
 
 console.log(reverseVal);
 
+console.clear();
+
+
+// destracture
+
+let a = [1,2,3,4]
+
+let a1 = a[0]
+let a2 = a[1]
+let a3 = a[2]
+let a4 = a[3]
+
+
+console.log(a1 + a1 + a4);
+
+
+// destracture
+
+let [b1,b2,b3,b4] = a
+
+console.log(b1 + b1 + b4);
+
+
+
+// object
+
+
+let emp = {
+    name11 : "john",
+    department : "QA",
+    Role : "Tester",
+    Salary : 2000000
+}
+
+let e1 = emp.name11
+let e2 = emp.department
+let e3 = emp.Role
+let e4 = emp.Salary
+
+
+console.log(e1,e3,e2,e4);
+
+// destracture 
+
+
+let {name11,department,Role,Salary} = emp
+
+console.log(name11,department,Role,Salary);
+
+
+// nested
+
+let nest = [1,2,[3,4,[5,6,[7]]]]
+
+let [f1,f2,[f3,f4,[f5,f6,[f7]]]] = nest
+
+console.log(f1,f7);
+
+
+
+console.clear();
+
+
+// Array Higher order method
+
+let games = ["Hockey","cricket","Badmiton","Kabadi","Foot ball"]
+
+// 1. forEach() - u directly print value All
+
+let forEachNew = games.forEach((currentElement,Index,TotalArray)=>{
+
+    return(currentElement);
+    
+    
+    
+    
+
+})
+
+console.log(forEachNew);
+
+
+// 2. map() - u print value and also reuse value
+
+let mapNew = games.map((c,i,t)=>{
+
+    return(c);
+    
+
+})
+
+console.log(mapNew);
+
+
+// 3. filter() -  we can give condition, satisfied  all answer print
+
+let emp1 = [
+    {name1 : "a" , salary : 100000},
+    {name1 : "b" , salary : 200000},
+    {name1 : "c" , salary : 300000},
+    {name1 : "d" , salary : 400000},
+    {name1 : "e" , salary : 500000},
+]
+
+
+let filterVal = emp1.filter((c,i,t)=>{
+   return c.salary > 300000
+})
+
+console.log(filterVal);
+
+
+// 4. find() - we can give condition , first satisfied ans only print
+
+let findVal = emp1.find((c,i,t)=>{
+ return c.salary > 300000;
+})
+
+console.log(findVal);
+
+
+
+emp1 = [
+  { name1: "a", salary: 100000 },
+  { name1: "b", salary: 200000 },
+  { name1: "c", salary: 300000 },
+  { name1: "d", salary: 400000 },
+  { name1: "e", salary: 500000 },
+];
+
+
+
+// 5. reduce() - we can calculate all value
+
+let reduceVal = emp1.reduce((accumlator,c,ind,TotalArray)=>{
+    return(accumlator + c.salary)
+
+    //  0 + 1 = 1
+    //  1 + 2 = 3 
+    //  3 + 3 = 6
+    //  6 + 4 = 10
+    //  10 + 5 = 15
+
+    // return acc + c.salary = 15 + 0
+},0) // 15
+
+console.log(reduceVal);
+
+
+
+
+// 6. some() - OR operator
+
+
+let someOrCheck = [1,2,3,4]
+
+let someCheck = someOrCheck.some((c,i,t)=>{
+ return c % 2 == 0 
+
+        // 1 % 2 == 0 --> false
+        // 2 % 2 == 0 --> true
+        // 3 % 2 == 0 --> false
+        // 4 % 2 == 0 --> true
+
+        // false || true || false || true = true
+})
+
+console.log(someCheck);
+
+
+
+// 7. every() - AND operator
+
+let EveryArr = [2,2,2,2]
+
+let everyCheck = EveryArr.every((c,i,t)=>{
+    return c % 2 == 0 
+})
+
+console.log(everyCheck);
+
+
+// 8. sort()
+
+let sortArr = [55,4,3,888,1,2,50000]
+
+let sort1 = sortArr.sort()
+
+console.log(sort1);
+
+
+let Sort11 = sortArr.sort((a,b)=>{
+    return b - a
+})
+
+console.log(Sort11);
+
+
+// array to string
+
+// toString()
+
+let normal1 = [1,2,3,4]
+
+console.log((normal1.toString()));
+
+
+// join()
+
+console.log(normal1.join("hello"));
+
+console.clear();
+
+
+// String Methods
+
+let str = "javascript"
+
+
+// charAt(), --> index = value
+
+let charAtVal = str.charAt(2)
+
+console.log(charAtVal);
+
+
+
+// charCodeAt(), -->  index = asscii value 
+
+let charCodeAtVal = str.charCodeAt(5)
+
+console.log(charCodeAtVal);
+
+
+str = "javascript";
+
+// length, 
+
+
+let lenghtVal = str.length
+
+console.log(lenghtVal);
+
+
+
+
+// slice(si,Ei + 1), --> spec value
+
+str = "javascript";
+
+let sliceVal1 = str.slice(2,5)
+
+console.log(sliceVal1);
+
+
+// toUpperCase(), 
+
+str = "jaVAScript";
+
+let upper = str.toUpperCase()
+
+console.log(upper);
+
+let lower = str.toLowerCase()
+
+console.log(lower);
+
+
+// trim(), we can avoid space value front and back gaps
+
+
+str = " javascript ";
+
+console.log(str[0]);
+
+let trimVal = str.trim()
+
+console.log(trimVal);
+
+
+// trimStart
+
+let trimStartVal = str.trimStart()
+
+console.log(trimStartVal);
+
+
+// trimEnd
+
+
+let trimEndVal = str.trimEnd()
+
+console.log(trimEndVal);
+
+
+
+// includes(),
+
+str = "javascript";
+
+let includes1 = str.includes("J")
+
+console.log(includes1);
+
+
+// indexOf(), --> value = index , Start to End
+
+str = "javascript";
+
+let indexOfVal1 = str.indexOf("a",2) // "value" , "From index"
+
+console.log(indexOfVal1);
+
+
+
+// lastIndexOf(), --> value = index , End to Start
+
+str = "javascript";
+
+let lastIndexOfVal1 = str.lastIndexOf("a",2)
+
+console.log(lastIndexOfVal1);
+
+
+
+// replace(), 
+
+str = "python Developer";
+
+let replaceVal = str.replace("python", "javascript") // change value , value
+
+console.log(replaceVal);
+
+
+
+// startsWith(), 
+
+str = "javascript";
+
+let start1 = str.startsWith("j")
+
+console.log(start1);
+
+
+
+// endsWith()
+
+str = "javascript";
+
+let end1 = str.endsWith("t")
+
+console.log(end1);
+
+
+// repeat
+
+str = "javascript";
+
+let repeatVal = str.repeat(1)
+
+console.log(repeatVal);
+
+
+
+
+
+// split(), 
+
+str = "java-script";
+
+let split1 = str.split("a")
+
+console.log(split1);
+
+// example :- 
+
+
+str = "javascript"; // Javascript
+
+
+let ex1 = str.replace("j","J")
+
+console.log(ex1);
+
+
+let ex2 = str.slice(1,11)
+let ex3 = str.slice(0,1)
+
+let exUpper = ex3.toUpperCase()
+
+
+console.log(exUpper+ex2);
+
+
+
+
+
+
+
+
+
+
 
 
 
