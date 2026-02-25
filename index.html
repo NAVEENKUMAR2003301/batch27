@@ -5,13 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
+<style>
+    .active{
+        background-color: aqua;
+
+        animation: left 1s linear;
+    }
+    .active:hover{
+        background-color: red;
+    }
+
+    @keyframes left{
+        0% {
+            transform: translateX(-100px);
+        }
+
+        100%{
+            transform: translateX(0px);
+        }
+    }
+</style>
 <body>
 
- 
     
-    <script>
-        
-    </script>
+<input type="text">
+
+<button>add</button>
+
+<ol></ol>
+
+    
+
 
      <script src="./script.js"></script>
 </body>
