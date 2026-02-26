@@ -25,15 +25,73 @@
             transform: translateX(0px);
         }
     }
+
+    body{
+        height: 100vh;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        gap: 20px;
+    }
+
+    .display >input {
+        border: none;
+        border-bottom: 2px solid black;
+        padding-bottom: 10px;
+
+        outline: none;
+    }
+
+    .display > button {
+        width: 50px;
+        border: none;
+        border-radius: 25px;
+        background-color: blueviolet;
+
+        color: white;
+
+        cursor: pointer;
+    }
+
+    ol{
+        width: auto;
+        height: auto;
+
+        
+    }
+
+    ol > li:hover:after{
+        content: "delete";
+        position: relative;
+        width: 100%;
+        height: 100%;
+
+        display: flex;
+        justify-content: end;
+        align-items: center;
+
+        cursor: pointer;
+    }
+
+
 </style>
 <body>
 
-    
-<input type="text">
+<div class="display">
+        
+<input type="text" placeholder="Enter your task">
 
 <button>add</button>
+</div>
 
 <ol></ol>
+
+
+<button><a href="./calc.html">Calculator</a></button>
+<button><a href="./Api.html">APi</a></button>
 
     
 
